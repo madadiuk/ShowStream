@@ -4,7 +4,7 @@ Explore a vast library of movies and TV series with ShowStream. Enjoy HD streami
 
 
 #Database ERD Diagram:
-![tblUsers (8)](https://github.com/madadiuk/ShowStream/assets/24778272/d69b8f7c-b553-4017-b9e0-25569c259361)
+![tblUsers (9)](https://github.com/madadiuk/ShowStream/assets/24778272/1b9e590f-df72-4acd-b2cb-bd2225a112a2)
 
 tblUserProfiles
 This table holds additional personal information about users. Each record links to a tblUsers record and includes the user's first name, last name, and date of birth.
