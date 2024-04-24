@@ -6,7 +6,7 @@ Explore a vast library of movies and TV series with ShowStream. Enjoy HD streami
 #Database ERD Diagram:
 ![tblUsers (9)](https://github.com/madadiuk/ShowStream/assets/24778272/1b9e590f-df72-4acd-b2cb-bd2225a112a2)
 
-tblUserProfiles
+## tblUserProfiles
 This table holds additional personal information about users. Each record links to a tblUsers record and includes the user's first name, last name, and date of birth.
 
 ProfileID: A unique identifier for each user profile.
@@ -14,7 +14,8 @@ UserID: The ID of the user this profile belongs to.
 FirstName: The user's first name.
 LastName: The user's last name.
 DateOfBirth: The user's date of birth.
-tblUsers
+
+## tblUsers
 This table stores the essential information of all users, including their credentials and roles within the platform.
 
 UserID: A unique identifier for each user.
@@ -22,7 +23,8 @@ Username: The chosen username for the user, which must be unique.
 Email: The user's email address, which must be unique.
 Password: The user's password, stored in a hashed format for security.
 Role: The user's role, which could be a regular user or an admin, controlling access to different parts of the system.
-tblTransactions
+
+## tblTransactions
 This table records transactions made by users, which could involve purchasing subscriptions or content.
 
 TransactionID: A unique identifier for each transaction.
@@ -31,7 +33,8 @@ Amount: The financial amount of the transaction.
 TransactionDate: The date and time when the transaction occurred.
 PaymentMethod: The method used for the transaction (e.g., credit card, PayPal).
 Status: The current status of the transaction (e.g., completed, pending).
-tblDownloads
+
+## tblDownloads
 This table tracks the downloads initiated by users, detailing what content was downloaded, when, and the size of the files.
 
 DownloadID: A unique identifier for each download event.
@@ -41,7 +44,8 @@ DownloadDate: The date and time the download was initiated.
 ContentType: The type of content downloaded, either a movie or series.
 Status: The status of the download (e.g., in progress, completed).
 FileSize: The size of the downloaded file in bytes.
-tblSeries
+
+## tblSeries
 This table contains information about TV series available on the platform.
 
 SeriesID: A unique identifier for each series.
@@ -51,13 +55,15 @@ Season: The season number of the series.
 EpisodeCount: The number of episodes in the series.
 StartYear/EndYear: The year the series started and ended (if it has concluded).
 Country: The country of origin of the series.
-tblGenres
+
+## tblGenres
 This table defines the different genres that can be associated with movies and series.
 
 GenreID: A unique identifier for each genre.
 Name: The name of the genre (e.g., action, drama, comedy).
 Description: A more detailed description of what the genre entails.
-tblMovies
+
+## tblMovies
 This table stores details about the individual movies available for streaming and downloading.
 
 MovieID: A unique identifier for each movie.
