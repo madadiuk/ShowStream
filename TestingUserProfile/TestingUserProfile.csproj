@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7032FF54-9316-4FFF-9612-EBA55F9781BA}</ProjectGuid>
+    <ProjectGuid>{53F17854-E215-4FE3-9860-C1E18BF9C6C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Testing3</RootNamespace>
-    <AssemblyName>Testing3</AssemblyName>
+    <RootNamespace>TestingUserProfile</RootNamespace>
+    <AssemblyName>TestingUserProfile</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

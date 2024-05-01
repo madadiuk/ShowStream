@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="3ConfirmDelete.aspx.cs" Inherits="_1_ConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserRoleManagementConfirmDelete.aspx" Inherits="UserRoleManagementConfirmDelete" %>
 
 <!DOCTYPE html>
 
