@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contentDashboard.aspx.cs" Inherits="contentDashboard" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contentDashboard.aspx.cs" Inherits="" %>
 
 <!DOCTYPE html>
 
