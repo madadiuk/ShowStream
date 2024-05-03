@@ -2,6 +2,88 @@
 Explore a vast library of movies and TV series with ShowStream. Enjoy HD streaming, personalized profiles, offline viewing, and smart recommendations. Dive into endless entertainment!
 ![showStream Logo](https://github.com/madadiuk/ShowStream/assets/24778272/a44756b8-331d-4a28-a643-c02e6ef6b327)
 
+## datebase code
+CREATE TABLE [dbo].[tblUsers] (
+    [UserID]   INT           IDENTITY (1, 1) NOT NULL,
+    [Username] VARCHAR (255) NULL,
+    [Email]    VARCHAR (255) NULL,
+    [Password] VARCHAR (255) NULL,
+    [Role]     VARCHAR (50)  NULL,
+    PRIMARY KEY CLUSTERED ([UserID] ASC),
+    UNIQUE NONCLUSTERED ([Username] ASC)
+);
+
+##
+CREATE TABLE [dbo].[tblUserProfiles] (
+    [ProfileID]   INT           IDENTITY (1, 1) NOT NULL,
+    [UserID]      INT           NULL,
+    [FirstName]   VARCHAR (255) NULL,
+    [LastName]    VARCHAR (255) NULL,
+    [DateOfBirth] DATE          NULL,
+    PRIMARY KEY CLUSTERED ([ProfileID] ASC),
+    FOREIGN KEY ([UserID]) REFERENCES [dbo].[tblUsers] ([UserID])
+);
+
+##
+CREATE TABLE [dbo].[tblTransactions] (
+    [TransactionID]   INT             IDENTITY (1, 1) NOT NULL,
+    [UserID]          INT             NULL,
+    [Amount]          DECIMAL (19, 4) NULL,
+    [TransactionDate] DATETIME        NULL,
+    [PaymentMethod]   VARCHAR (50)    NULL,
+    [Status]          VARCHAR (50)    NULL,
+    PRIMARY KEY CLUSTERED ([TransactionID] ASC),
+    FOREIGN KEY ([UserID]) REFERENCES [dbo].[tblUsers] ([UserID])
+);
+##
+CREATE TABLE [dbo].[tblSeries] (
+    [SeriesID]     INT           IDENTITY (1, 1) NOT NULL,
+    [GenreID]      INT           NULL,
+    [Title]        VARCHAR (255) NULL,
+    [Season]       INT           NULL,
+    [EpisodeCount] INT           NULL,
+    [StartYear]    DATE          NULL,
+    [EndYear]      DATE          NULL,
+    [Country]      VARCHAR (255) NULL,
+    PRIMARY KEY CLUSTERED ([SeriesID] ASC),
+    FOREIGN KEY ([GenreID]) REFERENCES [dbo].[tblGenres] ([GenreID])
+);
+##
+CREATE TABLE [dbo].[tblMovies] (
+    [MovieID]     INT           IDENTITY (1, 1) NOT NULL,
+    [Title]       VARCHAR (255) NULL,
+    [Description] VARCHAR (MAX) NULL,
+    [GenreID]     INT           NULL,
+    [Director]    VARCHAR (255) NULL,
+    [ReleaseDate] DATE          NULL,
+    [Duration]    INT           NULL,
+    PRIMARY KEY CLUSTERED ([MovieID] ASC),
+    FOREIGN KEY ([GenreID]) REFERENCES [dbo].[tblGenres] ([GenreID])
+);
+##
+CREATE TABLE [dbo].[tblGenres] (
+    [GenreID]     INT           IDENTITY (1, 1) NOT NULL,
+    [Name]        VARCHAR (255) NULL,
+    [Description] VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([GenreID] ASC)
+);
+##
+CREATE TABLE [dbo].[tblDownloads] (
+    [DownloadID]   INT          IDENTITY (1, 1) NOT NULL,
+    [UserID]       INT          NULL,
+    [MovieID]      INT          NULL,
+    [SeriesID]     INT          NULL,
+    [DownloadDate] DATETIME     NULL,
+    [ContentType]  VARCHAR (50) NULL,
+    [Status]       VARCHAR (50) NULL,
+    [FileSize]     BIGINT       NULL,
+    PRIMARY KEY CLUSTERED ([DownloadID] ASC),
+    FOREIGN KEY ([UserID]) REFERENCES [dbo].[tblUsers] ([UserID]),
+    FOREIGN KEY ([MovieID]) REFERENCES [dbo].[tblMovies] ([MovieID]),
+    FOREIGN KEY ([SeriesID]) REFERENCES [dbo].[tblSeries] ([SeriesID])
+);
+
+
 
 #Database ERD Diagram:
 ![tblUsers (9)](https://github.com/madadiuk/ShowStream/assets/24778272/1b9e590f-df72-4acd-b2cb-bd2225a112a2)
