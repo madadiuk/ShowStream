@@ -2,6 +2,15 @@
 Explore a vast library of movies and TV series with ShowStream. Enjoy HD streaming, personalized profiles, offline viewing, and smart recommendations. Dive into endless entertainment!
 ![showStream Logo](https://github.com/madadiuk/ShowStream/assets/24778272/a44756b8-331d-4a28-a643-c02e6ef6b327)
 
+## Database details to connect at DMU University machines.
+# Server name:
+v00egd00002l.lec-admin.dmu.ac.uk
+# Username:
+p2731259
+# Password:
+42714271427142714271
+
+
 ## datebase code
 CREATE TABLE [dbo].[tblUsers] (
     [UserID]   INT           IDENTITY (1, 1) NOT NULL,
