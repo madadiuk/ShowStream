@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contentDashboard.aspx.cs" Inherits="" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ContentDashboard.aspx.cs" Inherits="ContentDashboard" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <p> this is a test page for content dashboard</p>
         </div>
     </form>
 </body>
