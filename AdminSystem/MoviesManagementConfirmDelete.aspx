@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MoviesManagementConfirmDelete.aspx" Inherits="MoviesManagementConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MoviesManagementConfirmDelete.aspx.cs" Inherits="MoviesManagementConfirmDelete" %>
 
 <!DOCTYPE html>
 

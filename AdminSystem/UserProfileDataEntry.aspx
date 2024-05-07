@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserProfileDataEntry.aspx" Inherits="UserProfileDataEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserProfileDataEntry.aspx.cs" Inherits="UserProfileDataEntry" %>
 
 <!DOCTYPE html>
 

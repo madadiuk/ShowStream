@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserRoleManagementViewer.aspx" Inherits="UserRoleManagementViewer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserRoleManagementViewer.aspx.cs" Inherits="UserRoleManagementViewer" %>
 
 <!DOCTYPE html>
 

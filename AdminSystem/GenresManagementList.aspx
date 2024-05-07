@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GenresManagementList.aspx" Inherits="GenresManagementList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GenresManagementList.aspx.cs" Inherits="GenresManagementList" %>
 
 <!DOCTYPE html>
 

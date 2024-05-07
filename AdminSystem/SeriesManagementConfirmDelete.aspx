@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SeriesManagementConfirmDelete.aspx" Inherits="SeriesManagementConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SeriesManagementConfirmDelete.aspx.cs" Inherits="SeriesManagementConfirmDelete" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserRoleManagementDataEntry.aspx" Inherits="UserRoleManagementDataEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserRoleManagementDataEntry.aspx.cs" Inherits="UserRoleManagementDataEntry" %>
 
 <!DOCTYPE html>
 
