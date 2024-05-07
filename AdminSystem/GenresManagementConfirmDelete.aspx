@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GenresManagementConfirmDelete.aspx" Inherits="GenresManagementConfirmDelete" %>
+﻿0<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GenresManagementConfirmDelete.aspx.cs" Inherits="GenresManagementConfirmDelete" %>
 
 <!DOCTYPE html>
 

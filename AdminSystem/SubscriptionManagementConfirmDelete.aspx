@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementConfirmDelete.aspx" Inherits="SubscriptionManagementConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementConfirmDelete.aspx.cs" Inherits="SubscriptionManagementConfirmDelete" %>
 
 <!DOCTYPE html>
 

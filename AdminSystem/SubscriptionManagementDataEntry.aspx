@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementDataEntry.aspx" Inherits="SubscriptionManagementDataEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementDataEntry.aspx.cs" Inherits="SubscriptionManagementDataEntry" %>
 
 <!DOCTYPE html>
 

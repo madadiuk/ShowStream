@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementViewer.aspx" Inherits="SubscriptionManagementViewer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubscriptionManagementViewer.aspx.cs" Inherits="SubscriptionManagementViewer" %>
 
 <!DOCTYPE html>
 

@@ -1,15 +1,14 @@
-<%@ Page Language = "C#" AutoEventWireup="true" CodeFile="contentdashboard.aspx.cs" Inherits="AdminSystem_contentdashboard" %>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
-<!DOCTYPE html>
+public partial class ContentDashboard : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+    }
+}

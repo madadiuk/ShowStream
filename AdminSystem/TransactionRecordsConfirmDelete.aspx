@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TransactionRecordsConfirmDelete.aspx" Inherits="TransactionRecordsConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TransactionRecordsConfirmDelete.aspx.cs" Inherits="TransactionRecordsConfirmDelete" %>
 
 <!DOCTYPE html>
 

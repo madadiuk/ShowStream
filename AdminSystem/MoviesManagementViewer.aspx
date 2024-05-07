@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MoviesManagementViewer.aspx" Inherits="MoviesManagementViewer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MoviesManagementViewer.aspx.cs" Inherits="MoviesManagementViewer" %>
 
 <!DOCTYPE html>
 

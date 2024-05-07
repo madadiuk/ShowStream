@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TransactionRecordsViewer.aspx" Inherits="TransactionRecordsViewer" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TransactionRecordsViewer.aspx.cs" Inherits="TransactionRecordsViewer" %>
 
 <!DOCTYPE html>
 

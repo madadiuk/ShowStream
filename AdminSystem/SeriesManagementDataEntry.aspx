@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SeriesManagementDataEntry.aspx" Inherits="SeriesManagementDataEntry" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SeriesManagementDataEntry.aspx.cs" Inherits="SeriesManagementDataEntry" %>
 
 <!DOCTYPE html>
 
