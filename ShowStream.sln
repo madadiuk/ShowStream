@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminSystem", "AdminSystem\", "{157421EE-9D45-44EB-9290-6574686CB7FC}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		ProjectReferences = "{e32146cf-ec09-4709-9881-42adf1b0735b}|ClassLibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50298"
 		Debug.AspNetCompiler.PhysicalPath = "AdminSystem\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50298\"
@@ -43,6 +44,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingUserProfile", "TestingUserProfile\TestingUserProfile.csproj", "{A1D75B4A-A0D0-4481-B6F4-383CA2E5E8C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingUserRoleManagement", "TestingUserRoleManagement\TestingUserRoleManagement.csproj", "{5CE08BFE-7B23-46DC-A2E1-971E982B670E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{536A1C29-5252-426E-9BAD-B48CDDF967B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
