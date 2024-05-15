@@ -171,7 +171,7 @@ CREATE TABLE [dbo].[tblVideoFiles] (
 CREATE TABLE [dbo].[tblTransactions] (
     [TransactionID]        INT             IDENTITY (1, 1) NOT NULL,
     [UserID]               INT             NOT NULL,
-    [Amount]               DECIMAL (19, 4) NOT NULL,
+    [Amount]               DECIMAL (19, 2) NOT NULL,
     [TransactionDate]      DATETIME        NOT NULL,
     [PaymentMethod]        VARCHAR (50)    NOT NULL,
     [PaymentMethodDetails] VARCHAR (255)   NULL,
@@ -946,6 +946,27 @@ BEGIN
     SELECT t.TransactionID, t.Amount, t.TransactionDate, t.PaymentMethod, t.Status
     FROM tblTransactions t
     WHERE t.UserID = @UserID;
+END
+
+## New spGetAllTransactionDetails added 12/05/2024
+
+CREATE PROCEDURE spGetAllTransactionDetails
+AS
+BEGIN
+    SELECT t.TransactionID, t.Amount, t.TransactionDate, t.PaymentMethod, t.Status, u.Username
+    FROM tblTransactions t
+    JOIN tblUsers u ON t.UserID = u.UserID
+END
+
+## New spSearchUsers added 12/05/2024
+
+CREATE PROCEDURE spSearchUsers
+    @SearchText NVARCHAR(100)
+AS
+BEGIN
+    SELECT UserID, Username
+    FROM tblUsers
+    WHERE Username LIKE '%' + @SearchText + '%'
 END
 
 

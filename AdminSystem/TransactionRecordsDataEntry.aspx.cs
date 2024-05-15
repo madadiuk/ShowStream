@@ -1,27 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class TransactionRecordsDataEntry : System.Web.UI.Page
 {
+    protected void Application_Start(object sender, EventArgs e)
+    {
+        ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
+        {
+            Path = "~/scripts/jquery-1.12.4.min.js",
+            DebugPath = "~/scripts/jquery-1.12.4.js",
+            CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js",
+            CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"
+        });
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            LoadTransactions();
+            
+            PopulatePaymentMethods(); // Populate the DropDownList for payment methods
+            PopulateStatuses(); // Populate the DropDownList for transaction statuses
+            LoadTransactions(); // Load existing transactions into the grid
         }
+    }
+
+
+    private void PopulatePaymentMethods()
+    {
+        ddlPaymentMethod.Items.Add(new ListItem("PayPal", "PayPal"));
+        ddlPaymentMethod.Items.Add(new ListItem("Debit Card", "Debit Card"));
+        ddlPaymentMethod.Items.Add(new ListItem("Credit Card", "Credit Card"));
+    }
+
+    private void PopulateStatuses()
+    {
+        ddlStatus.Items.Add(new ListItem("Completed", "Completed"));
+        ddlStatus.Items.Add(new ListItem("Pending", "Pending"));
+        ddlStatus.Items.Add(new ListItem("Failed", "Failed"));
     }
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        int userId = int.Parse(txtUserId.Text);
+        int userId = Convert.ToInt32(Request.Form["usernameInput"]); // Read the value from hidden input
         decimal amount = decimal.Parse(txtAmount.Text);
         DateTime transactionDate = DateTime.Parse(txtTransactionDate.Text);
-        string paymentMethod = txtPaymentMethod.Text;
-        string status = txtStatus.Text;
+        string paymentMethod = ddlPaymentMethod.SelectedValue;
+        string status = ddlStatus.SelectedValue;
 
         TransactionManager tm = new TransactionManager();
         tm.AddTransaction(userId, amount, transactionDate, paymentMethod, status);
@@ -29,10 +55,11 @@ public partial class TransactionRecordsDataEntry : System.Web.UI.Page
         LoadTransactions();
     }
 
+
     private void LoadTransactions()
     {
         TransactionManager tm = new TransactionManager();
-        gvTransactions.DataSource = tm.GetAllTransactions();
+        gvTransactions.DataSource = tm.GetAllTransactionDetails();  // Ensure this method calls the new or updated stored procedure
         gvTransactions.DataBind();
     }
 }

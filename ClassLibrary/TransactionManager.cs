@@ -1,5 +1,7 @@
 ﻿using System.Data;
 using System;
+using ClassLibrary;
+using System.Collections.Generic;
 
 public class TransactionManager
 {
@@ -9,6 +11,31 @@ public class TransactionManager
     {
         connection = new clsDataConnection(); // Assuming clsDataConnection handles your DB connections
     }
+    public List<User> SearchUsers(string searchText)
+    {
+        List<User> users = new List<User>();
+        try
+        {
+            connection.AddParameter("@SearchText", searchText);
+            connection.Execute("spSearchUsers");  // This should now successfully call the stored procedure
+
+            foreach (DataRow row in connection.DataTable.Rows)
+            {
+                users.Add(new User()
+                {
+                    UserID = Convert.ToInt32(row["UserID"]),
+                    Username = row["Username"].ToString()
+                });
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle or log the exception as appropriate
+            System.Diagnostics.Debug.WriteLine("Error in SearchUsers: " + ex.Message);
+        }
+        return users;
+    }
+
 
     public void AddTransaction(int userId, decimal amount, DateTime transactionDate, string paymentMethod, string status)
     {
@@ -18,6 +45,12 @@ public class TransactionManager
         connection.AddParameter("@PaymentMethod", paymentMethod);
         connection.AddParameter("@Status", status);
         connection.Execute("spAddTransaction");
+    }
+
+    public DataTable GetUsers()
+    {
+        connection.Execute("spGetAllUsers"); // Ensure you have a stored procedure named 'spGetUsers' that returns user IDs and names
+        return connection.DataTable;
     }
 
     public void UpdateTransaction(int transactionId, int userId, decimal amount, DateTime transactionDate, string paymentMethod, string status)
@@ -42,6 +75,13 @@ public class TransactionManager
         connection.Execute("spGetAllTransactions");
         return connection.DataTable;
     }
+
+    public DataTable GetAllTransactionDetails()
+    {
+        connection.Execute("spGetAllTransactionDetails");  // Ensure this stored procedure returns Username along with other transaction details
+        return connection.DataTable;
+    }
+
 
     // Retrieve transactions within a specific date range
     public DataTable GetTransactionsByDateRange(DateTime startDate, DateTime endDate)
@@ -104,4 +144,5 @@ public class TransactionManager
         results.Tables.Add(connection.DataTable);
         return results;
     }
+
 }
